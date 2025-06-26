@@ -18,6 +18,8 @@ form.addEventListener("submit", (e) => {
     cnt += 1;
     if (user == random) {
         result.textContent = `Congrats! You guessed the number in ${cnt} times`;
+        cnt = 0;
+        random = Math.floor(Math.random() * 100 + 1);
     } else if (user < random) {
         if (flag1 == 0) {
             result.textContent = "Uff! the number is bigger";
